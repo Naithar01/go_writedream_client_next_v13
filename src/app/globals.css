@@ -105,3 +105,24 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Layout Css */
+.app {
+  margin: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 8px 16px;
+}
+
+.header_page_logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.header_manu_list li {
+  list-style: none
+}
