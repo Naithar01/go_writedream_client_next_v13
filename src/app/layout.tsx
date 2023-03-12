@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { PROJECT_PAGE_LOGO, PROJECT_PAGE_MANU_LIST } from '../../config'
+import { PROJECT_PAGE_LOGO, PROJECT_PAGE_MANU_LIST } from '../config'
 import './globals.css'
 
 export const metadata = {
@@ -11,7 +11,7 @@ type Props = {
   children: React.ReactNode
 }
 
-export default function RootLayout({children}: Props) {
+const RootLayout = ({children}: Props) => {
   return (
     <html lang="en">
       <body>
@@ -32,9 +32,11 @@ export default function RootLayout({children}: Props) {
         </div>
       </header>
       <div className="app">
-      {children}
+        {children}
       </div>
       </body>
     </html>
   )
 }
+
+export default RootLayout

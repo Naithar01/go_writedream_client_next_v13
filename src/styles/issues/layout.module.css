@@ -1,0 +1,17 @@
+.issues {
+    display: flex;
+}
+
+.issue_side {
+    width: 200px;
+    margin-right: 40px
+}
+
+.issue_side > h1 {
+    font-size: 1.5rem;
+}
+
+.issue_side ul li {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}

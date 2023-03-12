@@ -1,0 +1,9 @@
+.create_issue_page_form_inp_area > label {
+    display: block;
+    font-size: 1.3rem
+}
+
+.create_issue_page_form_inp_area > input {
+    margin-top: 4px;
+    padding: 4px 6px
+}

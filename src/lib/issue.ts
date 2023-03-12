@@ -11,7 +11,7 @@ export const getIssues = async () => {
         headers: {
             'Content-Type': 'application/json',
         },
-        next: { revalidate: 15 } // getStaticProps Option revalidate => 10
+        // next: { revalidate: 30 } // getStaticProps Option revalidate => 10
     })
 
     return await res.json()

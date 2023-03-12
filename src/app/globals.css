@@ -100,6 +100,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -121,8 +125,4 @@ a {
 .header_page_logo {
   font-size: 20px;
   font-weight: 700;
-}
-
-.header_manu_list li {
-  list-style: none
 }
