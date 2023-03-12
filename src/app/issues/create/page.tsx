@@ -2,6 +2,7 @@
 
 import CreateIssueForm from "@/components/issue/create-issue-form"
 import { createIssue, ICreateIssue } from "@/lib/issue"
+import { use } from "react"
 import { CREATE_ISSUE_PAGE_HEADER_COMMENT } from "../../../config"
 
 const CreateIssuePage = () => {

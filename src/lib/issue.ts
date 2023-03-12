@@ -11,7 +11,7 @@ export interface ICreateIssue {
 }
 
 export const getIssues = async () => {
-    const res = await fetch(`${DEFAULT_API_URL}/api/issues`, {
+    const res = await fetch(`http://ec2-18-212-96-77.compute-1.amazonaws.com:8080/api/issues`, {
         method: "GET",
         headers: {
             'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ export const getIssues = async () => {
 }
 
 export const createIssue = async (Data: ICreateIssue, category: number) => {
-    const res = await fetch(`${DEFAULT_API_URL}/api/issues?category=${category}`, {
+    const res = await fetch(`http://ec2-18-212-96-77.compute-1.amazonaws.com:8080/api/issues?category_id=${category}`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
