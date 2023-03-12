@@ -4,7 +4,6 @@ import { ISSUES_PAGE_HEADER_COMMENT, NO_OBJECT_COMMENT } from "../../config"
 
 const IssuesPage = () => {
     const data: IIssue = use(getIssues())
-    console.log(data);
     
     return (
         <div className="issues_page">
