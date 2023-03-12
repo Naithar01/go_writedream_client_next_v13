@@ -1,5 +1,5 @@
+import { ISSUE_PAGE_MANU_LIST } from "@/config"
 import Link from "next/link"
-import { ISSUE_PAGE_MANU_LIST } from "../../config"
 import styles from "../../styles/issues/layout.module.css"
 
 type Props = {

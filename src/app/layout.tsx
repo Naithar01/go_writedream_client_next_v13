@@ -1,5 +1,5 @@
+import { PROJECT_PAGE_LOGO, PROJECT_PAGE_MANU_LIST } from '@/config'
 import Link from 'next/link'
-import { PROJECT_PAGE_LOGO, PROJECT_PAGE_MANU_LIST } from '../config'
 import './globals.css'
 
 export const metadata = {

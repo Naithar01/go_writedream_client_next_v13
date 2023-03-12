@@ -46,7 +46,7 @@ const PAGE_HREF: IPAGE_HREF = {
     }
 }
 
-export const DEFAULT_API_URL: string = "http://ec2-18-212-96-77.compute-1.amazonaws.com:8080"
+export const DEFAULT_API_URL: string = "http://ec2-3-39-230-239.ap-northeast-2.compute.amazonaws.com:8080";
 
 export const PROJECT_PAGE_LOGO: string = "LOGO"
 
