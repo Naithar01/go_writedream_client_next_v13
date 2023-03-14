@@ -1,3 +1,4 @@
+import ReadIssueItem from "@/components/issue/read-issue-item"
 import { getIssueByIssueId, IReadIssue } from "@/lib/issue"
 import { use } from "react"
 
@@ -13,7 +14,9 @@ const ReadIssuePage = ({params}: Props) => {
 
   return (
       <div className="read_issue_page">
-            {JSON.stringify(data.issue)}
+            <ReadIssueItem
+                issue={data.issue}
+            />
       </div>
   )
 }

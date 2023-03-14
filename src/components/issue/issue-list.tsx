@@ -1,4 +1,5 @@
 import { IIssue } from "@/lib/issue"
+import Link from "next/link"
 
 type Props = {
     issues: IIssue[]
@@ -9,7 +10,7 @@ const IssueList = ({issues}: Props) => {
         <div className="issue_list">
             {issues.map((issue) => (
                 <div className="issue_list_item" key={issue.id}>
-                    <header>{issue.id}</header>
+                    <header><Link href={`/issues/${issue.id}`}>{issue.id}</Link></header>
                 </div>
             ))}
         </div>

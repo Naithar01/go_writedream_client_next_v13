@@ -1,0 +1,8 @@
+.read_issue_page_item_header_date > span {
+    display: block;
+    font-size: 12px;
+}
+
+.read_issue_page_item_content {
+    margin-top: 20px;
+}

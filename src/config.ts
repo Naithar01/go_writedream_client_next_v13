@@ -69,3 +69,7 @@ export const CREATE_ISSUE_PAGE_INPUT_ISSUE_CONTENT_COMMENT: string = "Issue Cont
 export const CREATE_ISSUE_PAGE_INPUT_ISSUE_CREATE_COMMENT: string = "Create Issue"
 export const CREATE_ISSUE_PAGE_INPUT_MINLENGTH: number = 6
 
+
+export const CREATED_COMMENT: string = "Created: "
+export const UPDATED_COMMENT: string = "Updated: "
+export const VIEWCOUNT_COMMENT: string = "View: "
