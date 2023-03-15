@@ -25,14 +25,37 @@ export interface ICreateIssue {
     content: string;
 }
 
-export const getIssues = async () => {
-    const res: Response = await fetch(`${DEFAULT_API_URL}/api/issues`, {
+interface IGetIssueQuery {
+    page: number, 
+    page_limit: number, 
+    category_id: number
+}
+
+export const getIssues = async ({page, page_limit, category_id}: IGetIssueQuery) => {
+    // 카테고리 상관 없는 Issue들
+    if (category_id == undefined || category_id <= 0) {
+        const res = await fetch(`${DEFAULT_API_URL}/api/issues?page=${page}&page_limit=${page_limit}`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            next: { revalidate: 10 }
+        });
+    
+        if (res.status != 200) {
+            return null
+        }
+
+        return await res.json();
+    } 
+
+    const res = await fetch(`${DEFAULT_API_URL}/api/issues?page=${page}&page_limit=${page_limit}&category_id=${category_id}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
         },
         next: { revalidate: 10 }
-        });
+    });
 
     if (res.status != 200) {
         return null

@@ -26,6 +26,7 @@ interface IPAGE_MANU_LIST {
 }
 
 
+// [Link] Page의 링크 이름
 const PAGE_NAME: IPAGE_NAME = {
     Project: {
         Issue: "Issues"
@@ -36,12 +37,13 @@ const PAGE_NAME: IPAGE_NAME = {
     }
 }
 
+// [Link] Page의 링크 이동 경로
 const PAGE_HREF: IPAGE_HREF = {
     Project: {
-        Issue: "/issues"
+        Issue: "/issues?page=1&page_limit=5"
     },
     Issue: {
-        Issues: "/issues",
+        Issues: "/issues?page=1&page_limit=5",
         Create: "/issues/create"
     }
 }
@@ -75,3 +77,4 @@ export const UPDATED_COMMENT: string = "Updated: "
 export const VIEWCOUNT_COMMENT: string = "View: "
 
 export const CREATE_SUCCESS_COMMENT: string = "Create Success"
+export const ISSUE_FETCH_NULL_DATA_COMMENT: string = "Reload Page"
