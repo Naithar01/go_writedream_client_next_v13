@@ -26,35 +26,50 @@ export interface ICreateIssue {
 }
 
 export const getIssues = async () => {
-    const res = await fetch(`${DEFAULT_API_URL}/api/issues`, {
+    const res: Response = await fetch(`${DEFAULT_API_URL}/api/issues`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
         },
         next: { revalidate: 10 }
         });
+
+    if (res.status != 200) {
+        return null
+    }
+
     return await res.json();
 };
 
 export const getIssueByIssueId = async (id: number) => {
-    const res = await fetch(`${DEFAULT_API_URL}/api/issues/${id}`, {
+    const res: Response = await fetch(`${DEFAULT_API_URL}/api/issues/${id}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
         },
         cache: 'no-store'
     });
+
+    if (res.status != 200) {
+        return null
+    }
+
     return await res.json();
 };
 
 
 export const createIssue = async (Data: ICreateIssue, category: number) => {
-    const res = await fetch(`http://localhost:3000/api/issues?category_id=${category}`, {
+    const res: Response = await fetch(`http://localhost:3000/api/issues?category_id=${category}`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(Data),
     })
-    return await res
+
+    if (res.status != 201) {
+        return null
+    }
+
+    return await res.json()
 }

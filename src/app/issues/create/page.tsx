@@ -2,9 +2,12 @@
 
 import CreateIssueForm from "@/components/issue/create-issue-form"
 import { createIssue, ICreateIssue } from "@/lib/issue"
-import { CREATE_ISSUE_PAGE_HEADER_COMMENT } from "../../../config"
+import { useRouter } from "next/navigation"
+import { CREATE_ISSUE_PAGE_HEADER_COMMENT, CREATE_SUCCESS_COMMENT } from "../../../config"
 
 const CreateIssuePage = () => {
+    const router = useRouter()
+
     const CreateIssueSubmitHandler = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
         event.preventDefault()
 
@@ -18,9 +21,13 @@ const CreateIssuePage = () => {
 
         const Category_number: number = 1 
 
-        const res_data = await createIssue(Data, Category_number)
+        const datas: {id: number} = await createIssue(Data, Category_number)
 
-        console.log(res_data);
+        alert(CREATE_SUCCESS_COMMENT)
+
+        // Go Read Issue Page
+        router.push(`/issues/${datas.id}`)   
+        return     
     }
 
 
