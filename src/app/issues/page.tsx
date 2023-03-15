@@ -10,9 +10,6 @@ type Props = {
 const IssuesPage = ({searchParams}: Props) => {
     const data: { issues: IIssue[], issues_count: number } = use(getIssues())
 
-    console.log(searchParams);
-    
-
     return (
         <div className="issues_page">
             <h1>{ISSUES_PAGE_HEADER_COMMENT}</h1>
