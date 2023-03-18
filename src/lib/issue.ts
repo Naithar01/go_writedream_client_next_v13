@@ -82,7 +82,7 @@ export const getIssueByIssueId = async (id: number) => {
 
 
 export const createIssue = async (Data: ICreateIssue, category: number) => {
-    const res: Response = await fetch(`http://localhost:3000/api/issues?category_id=${category}`, {
+    const res: Response = await fetch(`/api/issues?category_id=${category}`, {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
