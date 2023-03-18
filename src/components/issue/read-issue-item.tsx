@@ -11,7 +11,6 @@ const ReadIssueItem = ({issue}: Props) => {
     return (
         <div className="read_issue_page_item">
             <header className="read_issue_page_item_header">
-                <h1>{issue.title}</h1>
                 <p className={styles.read_issue_page_item_header_date}>
                     <span>{CREATED_COMMENT + new Date(issue.created_at).toLocaleString()}</span>
                     <span>{UPDATED_COMMENT + new Date(issue.updated_at).toLocaleString()}</span>

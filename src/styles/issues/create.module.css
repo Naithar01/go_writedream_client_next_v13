@@ -4,7 +4,7 @@
 
 .create_issue_page_form_inp_area > label {
     display: block;
-    font-size: 1.3rem
+    font-size: 0.8rem
 }
 
 .create_issue_page_form_inp_area > input,
@@ -21,4 +21,9 @@
 .create_issue_page_form_inp_area > button {
     width: 100%;
     padding: 5px;
+}
+
+.create_issue_page {
+    width: 100%;
+    max-width: 500px;
 }

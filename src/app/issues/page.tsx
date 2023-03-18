@@ -33,7 +33,7 @@ const IssuesPage = ({searchParams}: Props) => {
 
     return (
         <div className="issues_page">
-            <h1>{ISSUES_PAGE_HEADER_COMMENT}</h1>
+            <h3>{ISSUES_PAGE_HEADER_COMMENT}</h3>
             {data && data.issues && data.issues.length ? 
                 <>
                     <IssueList issues={data.issues} />

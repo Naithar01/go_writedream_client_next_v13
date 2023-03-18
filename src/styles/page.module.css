@@ -1,8 +1,30 @@
 .main_page {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   min-height: 100vh;
+  max-width: 750px;
+  margin: 0px auto;
+}
+
+.main_page header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.main_page_content {
+  margin: 0px 8px;
+}
+
+.main_page_content > div {
+  margin-top: 24px;
+}
+
+.main_page_content > div > a {
+  text-decoration: underline;
+  list-style: circle;
+}
+
+.main_page_content > div > ul li {
+  margin-left: 20px;
+  list-style: circle;
 }

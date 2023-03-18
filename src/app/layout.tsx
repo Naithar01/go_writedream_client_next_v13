@@ -15,7 +15,7 @@ const RootLayout = ({children}: Props) => {
   return (
     <html lang="en">
       <body>
-      <header className="header">
+      <header className="header web_header_background_img">
         <div className="header_page_logo">
           <Link href="/">{PROJECT_PAGE_LOGO}</Link>
         </div>
@@ -32,6 +32,7 @@ const RootLayout = ({children}: Props) => {
         </div>
       </header>
       <div className="app">
+        <div className="site_banner"></div>
         {children}
       </div>
       </body>

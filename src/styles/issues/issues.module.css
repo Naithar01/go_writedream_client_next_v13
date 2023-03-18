@@ -22,3 +22,11 @@
 .activePage > a {
     cursor: not-allowed;
 }
+
+.issue_list_item_list {
+    margin-bottom: 10px;
+}
+
+.issue_list_item_list_item {
+    list-style: circle;
+}

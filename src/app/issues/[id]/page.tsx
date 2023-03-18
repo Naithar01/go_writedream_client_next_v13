@@ -14,6 +14,7 @@ const ReadIssuePage = ({params}: Props) => {
 
   return (
       <div className="read_issue_page">
+        <h3>{data.issue.title}</h3>
             <ReadIssueItem
                 issue={data.issue}
             />

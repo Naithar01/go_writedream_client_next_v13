@@ -5,6 +5,8 @@ import { createIssue, ICreateIssue } from "@/lib/issue"
 import { useRouter } from "next/navigation"
 import { CREATE_ISSUE_PAGE_HEADER_COMMENT, CREATE_SUCCESS_COMMENT } from "../../../config"
 
+import styles from "../../../styles/issues/create.module.css"
+
 const CreateIssuePage = () => {
     const router = useRouter()
 
@@ -32,8 +34,8 @@ const CreateIssuePage = () => {
 
 
     return (
-        <div className="create_issue_page">
-            <h1>{CREATE_ISSUE_PAGE_HEADER_COMMENT}</h1>
+        <div className={styles.create_issue_page}>
+            <h3>{CREATE_ISSUE_PAGE_HEADER_COMMENT}</h3>
             <CreateIssueForm 
                 CreateIssueSubmitHandler={CreateIssueSubmitHandler}
             />

@@ -18,6 +18,13 @@ interface IPAGE_HREF {
     }
 }
 
+interface IPAGE_INFO {
+    Title: string,
+    Url_Name?: string,
+    Url?: string,
+    text: string[]
+}
+
 
 interface IPAGE_MANU_LIST {
     item_name: string;
@@ -48,6 +55,14 @@ const PAGE_HREF: IPAGE_HREF = {
     }
 }
 
+export const MAIN_PAGE_BANNER_TITLE:string = "Zl존04정호"
+
+export const MAIN_PAGE_BANNER_CONTENTS: IPAGE_INFO[] = [
+    { Title: "Backend", Url_Name: "Github", Url: "https://github.com/Naithar01/go_writedream_server", text: ["Go Language", "Go - Gin Web Framework", "Docker, Deploy: AWS EC2"] },
+    { Title: "Frontend", Url_Name: "Github", Url: "https://github.com/Naithar01/go_writedream_client_next_v13", text: ["Javascript", "Typescript tempalte", "Next 13"] },
+    { Title: "DB", text: ["Mysql"] },
+]
+
 export const DEFAULT_API_URL: string = "http://ec2-3-34-53-123.ap-northeast-2.compute.amazonaws.com:8080";
 
 export const PROJECT_PAGE_LOGO: string = "LOGO"
@@ -58,6 +73,7 @@ export const PROJECT_PAGE_MANU_LIST: IPAGE_MANU_LIST[] = [
 
 export const NO_OBJECT_COMMENT: string = "No Object"
 
+export const ISSUE_PAGE_MANU_TITLE: string = "Manu"
 export const ISSUE_PAGE_MANU_LIST: IPAGE_MANU_LIST[] = [
     { item_name: PAGE_NAME.Issue.Issues, item_href: PAGE_HREF.Issue.Issues, item_class_name: "issue_side_manu_item" },
     { item_name: PAGE_NAME.Issue.Create, item_href: PAGE_HREF.Issue.Create, item_class_name: "issue_side_manu_item" }

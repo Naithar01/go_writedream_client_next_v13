@@ -1,17 +1,22 @@
 .issues {
     display: flex;
+    width: 100%;
+    margin-top: 35px;
+    padding: 8px;
 }
 
 .issue_side {
-    width: 200px;
-    margin-right: 40px
+    width: 150px;
 }
 
 .issue_side > h1 {
     font-size: 1.5rem;
 }
 
-.issue_side ul li {
+.issue_side .issue_side_manu li {
+    list-style: circle;
+    margin-left: 20px;
     margin-bottom: 5px;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+    text-decoration: underline;
 }
