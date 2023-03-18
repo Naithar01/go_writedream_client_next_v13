@@ -12,7 +12,7 @@ const CreateIssuePage = () => {
         event.preventDefault()
 
         const title_element: HTMLInputElement = event.currentTarget[0] as HTMLInputElement
-        const content_element: HTMLInputElement = event.currentTarget[1] as HTMLInputElement
+        const content_element: HTMLTextAreaElement = event.currentTarget[1] as HTMLTextAreaElement
 
         const Data: ICreateIssue = {
             title: title_element.value,

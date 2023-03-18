@@ -16,17 +16,18 @@ const CreateIssueForm = ({CreateIssueSubmitHandler}: Props) => {
                         id="title" 
                         autoComplete="off" 
                         placeholder={CREATE_ISSUE_PAGE_INPUT_ISSUE_TITLE_COMMENT}
-                        minLength={CREATE_ISSUE_PAGE_INPUT_MINLENGTH}/>
+                        minLength={CREATE_ISSUE_PAGE_INPUT_MINLENGTH}
+                        autoFocus />
                         
             </div>
             <div className={styles.create_issue_page_form_inp_area}>
                 <label htmlFor="content">{CREATE_ISSUE_PAGE_INPUT_ISSUE_CONTENT_COMMENT}</label>
-                <input type="text" 
+                <textarea 
                         name="content" 
                         id="content" 
                         autoComplete="off" 
                         placeholder={CREATE_ISSUE_PAGE_INPUT_ISSUE_CONTENT_COMMENT}
-                        minLength={CREATE_ISSUE_PAGE_INPUT_MINLENGTH}/>
+                        minLength={CREATE_ISSUE_PAGE_INPUT_MINLENGTH} />
             </div>
             <div className={styles.create_issue_page_form_inp_area}>
                 <button type="submit" name="submit" id="submit">{CREATE_ISSUE_PAGE_INPUT_ISSUE_CREATE_COMMENT}</button>

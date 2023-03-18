@@ -19,7 +19,15 @@ const ReadIssueItem = ({issue}: Props) => {
                 <small>{VIEWCOUNT_COMMENT + issue.view_count}</small>
             </header>
             <div className={styles.read_issue_page_item_content}>
-                {issue.content}
+                {issue.content.split("\n").map((issueContent, i) => (
+                    issueContent.length ? 
+                    <p key={i}>
+                        {issueContent}
+                    </p> : 
+                    <p key={i}>
+                        &nbsp;
+                    </p>
+                ))}
             </div>
             <footer className="read_issue_page_item_memos">
 

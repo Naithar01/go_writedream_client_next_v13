@@ -2,6 +2,7 @@ import { use } from "react"
 import { getIssues, IIssue } from "@/lib/issue"
 import { ISSUES_PAGE_HEADER_COMMENT, ISSUE_FETCH_NULL_DATA_COMMENT, NO_OBJECT_COMMENT } from "../../config"
 import IssueList from "@/components/issue/issue-list"
+import IssuePagination from "./issue_pagination"
 
 type Props = {
     searchParams: { page: number, page_limit: number, category_id: number };
@@ -18,6 +19,8 @@ const IssuesPage = ({searchParams}: Props) => {
 
     const data: { issues: IIssue[], issues_count: number } = use(getIssues({page, page_limit, category_id}))
     
+    const max_page: number = Math.ceil(data.issues_count / page_limit)
+
     if (data == null) {
         return (
             <div className="issues_page_error">
@@ -32,7 +35,10 @@ const IssuesPage = ({searchParams}: Props) => {
         <div className="issues_page">
             <h1>{ISSUES_PAGE_HEADER_COMMENT}</h1>
             {data && data.issues && data.issues.length ? 
-                <IssueList issues={data.issues} />: 
+                <>
+                    <IssueList issues={data.issues} />
+                    <IssuePagination page={page} page_limit={page_limit} max_page={max_page} />
+                </>: 
                 <div>{NO_OBJECT_COMMENT}</div>
             }
         </div>
