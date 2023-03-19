@@ -23,6 +23,10 @@
     cursor: not-allowed;
 }
 
+.issue_list {
+    padding-left: 20px;
+}
+
 .issue_list_item_list {
     margin-bottom: 10px;
 }

@@ -9,7 +9,7 @@ type Props = {
 
 const IssueList = ({issues}: Props) => {
     return (
-        <div className="issue_list">
+        <div className={styles.issue_list}>
             {issues.map((issue) => (
                 <ul className={styles.issue_list_item_list} key={issue.id}>
                     <li className={styles.issue_list_item_list_item}>

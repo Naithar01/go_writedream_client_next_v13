@@ -52,11 +52,11 @@ const RootLayout = ({children}: Props) => {
           </ul>
         </div>
       </header>
+      <div className="site_banner banner"></div>
       <div className="app">
-        <div className="site_banner banner"></div>
         {children}
-        <footer className="site_footer_banner banner"></footer>
       </div>
+      <footer className="site_footer_banner banner"></footer>
       </body>
     </html>
   )

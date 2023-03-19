@@ -1,8 +1,8 @@
 .main_page {
   width: 100%;
   min-height: 100vh;
-  max-width: 750px;
-  margin: 0px auto;
+  /* max-width: 750px; */
+  /* margin: 0px auto; */
 }
 
 .main_page header {
