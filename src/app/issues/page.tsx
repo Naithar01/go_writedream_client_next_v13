@@ -1,4 +1,3 @@
-import { use } from "react"
 import { getIssues, IIssue } from "@/lib/issue"
 import { ISSUES_PAGE_HEADER_COMMENT, ISSUE_FETCH_NULL_DATA_COMMENT, NO_OBJECT_COMMENT } from "../../config"
 import IssueList from "@/components/issue/issue-list"
@@ -8,7 +7,7 @@ type Props = {
     searchParams: { page: number, page_limit: number, category_id: number };
 }
 
-const IssuesPage = ({searchParams}: Props) => {
+const IssuesPage = async ({searchParams}: Props) => {
     // Query
     let { page, page_limit, category_id } = searchParams
 
@@ -17,7 +16,7 @@ const IssuesPage = ({searchParams}: Props) => {
         page_limit = 5
     }
 
-    const data: { issues: IIssue[], issues_count: number } = use(getIssues({page, page_limit, category_id}))
+    const data: { issues: IIssue[], issues_count: number } = await getIssues({page, page_limit, category_id})
     
     const max_page: number = Math.ceil(data.issues_count / page_limit)
 
@@ -29,7 +28,6 @@ const IssuesPage = ({searchParams}: Props) => {
             </div>
         )
     } 
-
 
     return (
         <div className="issues_page">
