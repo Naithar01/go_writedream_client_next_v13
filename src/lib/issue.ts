@@ -39,7 +39,7 @@ export const getIssues = async ({page, page_limit, category_id}: IGetIssueQuery)
             headers: {
                 "Content-Type": "application/json",
             },
-            next: { revalidate: 10 }
+            cache: 'no-store'
         });
     
         if (res.status != 200) {
@@ -54,7 +54,7 @@ export const getIssues = async ({page, page_limit, category_id}: IGetIssueQuery)
         headers: {
             "Content-Type": "application/json",
         },
-        next: { revalidate: 10 }
+        cache: 'no-store'
     });
 
     if (res.status != 200) {

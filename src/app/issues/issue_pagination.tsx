@@ -18,13 +18,13 @@ const IssuePagination = ({page, page_limit, max_page}: Props) => {
                 if (page == i) {
                     page_link_btn_itmes.push(
                         <li key={i} className={`${styles.issues_pagination_list_item} ${styles.activePage}`}>
-                            <Link href={`/issues?page=${i}&page_limit=${page_limit}`}>{i}</Link>
+                            <Link href={`/issues?page=${i}&page_limit=${page_limit}`} shallow={true}>{i}</Link>
                         </li>
                     )
                 } else {
                     page_link_btn_itmes.push(
                         <li key={i} className={styles.issues_pagination_list_item}>
-                            <Link href={`/issues?page=${i}&page_limit=${page_limit}`}>{i}</Link>
+                            <Link href={`/issues?page=${i}&page_limit=${page_limit}`} shallow={true}>{i}</Link>
                         </li>
                     )
                 }

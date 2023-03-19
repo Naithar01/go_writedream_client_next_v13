@@ -23,7 +23,6 @@ const IssuesPage = async ({searchParams}: Props) => {
     if (data == null) {
         return (
             <div className="issues_page_error">
-                <h1>Error...</h1>
                 <p>{ISSUE_FETCH_NULL_DATA_COMMENT}</p>
             </div>
         )

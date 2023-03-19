@@ -60,6 +60,16 @@ export const MAIN_PAGE_BANNER_TITLE:string = "Zl존04정호"
 export const MAIN_PAGE_BANNER_CONTENTS: IPAGE_INFO[] = [
     { Title: "Backend", Url_Name: "Github", Url: "https://github.com/Naithar01/go_writedream_server", text: ["Go Language", "Go - Gin Web Framework", "Docker, Deploy: AWS EC2"] },
     { Title: "Frontend", Url_Name: "Github", Url: "https://github.com/Naithar01/go_writedream_client_next_v13", text: ["Javascript", "Typescript tempalte", "Next 13"] },
+    { Title: "Music", Url_Name: "Keiko Utsumi", Url: "https://www.youtube.com/watch?v=K7EHxjrEono", text: ["00:00 01 空に虹が浮かんでも",
+                                                                                                           "04:54 02 ランチ・タイム物語（ストーリー）",
+                                                                                                           "09:30 03 抱きしめて～シュールな恋",
+                                                                                                           "13:50 04 春の花束（ブーケ）",
+                                                                                                           "18:30 05 オーロラの見える時～ワン・サイド・ラヴ",
+                                                                                                           "23:13 06 去年の恋人",
+                                                                                                           "27:00 07 寒い夜",
+                                                                                                           "32:25 08 イリュージョンの都会（まち）",
+                                                                                                           "37:28 09 プリファレンス",
+                                                                                                           "42:12 10 風が通り過ぎた午後" ] },
     { Title: "DB", text: ["Mysql"] },
 ]
 
@@ -93,4 +103,4 @@ export const UPDATED_COMMENT: string = "Updated: "
 export const VIEWCOUNT_COMMENT: string = "View: "
 
 export const CREATE_SUCCESS_COMMENT: string = "Create Success\nPage Loading..."
-export const ISSUE_FETCH_NULL_DATA_COMMENT: string = "Reload Page"
+export const ISSUE_FETCH_NULL_DATA_COMMENT: string = "No Issues, Create Issue"
