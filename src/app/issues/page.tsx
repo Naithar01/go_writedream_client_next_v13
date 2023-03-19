@@ -3,6 +3,8 @@ import { ISSUES_PAGE_HEADER_COMMENT, ISSUE_FETCH_NULL_DATA_COMMENT, NO_OBJECT_CO
 import IssueList from "@/components/issue/issue-list"
 import IssuePagination from "./issue_pagination"
 
+import styles from "../../styles/issues/issues.module.css"
+
 type Props = {
     searchParams: { page: number, page_limit: number, category_id: number };
 }
@@ -29,7 +31,7 @@ const IssuesPage = async ({searchParams}: Props) => {
     } 
 
     return (
-        <div className="issues_page">
+        <div className={styles.issues_page}>
             <h3>{ISSUES_PAGE_HEADER_COMMENT}</h3>
             {data && data.issues && data.issues.length ? 
                 <>

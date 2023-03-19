@@ -1,3 +1,7 @@
+.issues_page {
+    width: 100%;
+}
+
 .issues_pagination {
     margin-top: 20px;
     border-top: 1px solid tomato;

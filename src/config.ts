@@ -104,3 +104,5 @@ export const VIEWCOUNT_COMMENT: string = "View: "
 
 export const CREATE_SUCCESS_COMMENT: string = "Create Success\nPage Loading..."
 export const ISSUE_FETCH_NULL_DATA_COMMENT: string = "No Issues, Create Issue"
+
+export const ISSUE_LOADING_PAGE_COMMENT: string = "Loading" 

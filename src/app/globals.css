@@ -53,10 +53,16 @@ li {
   background-position:top;
   background-repeat: no-repeat;
   width: 100%;
-  height: 400px;
+  height: 700px;
   opacity: 0;
   transition: all 1s;
 } 
+
+@media screen and (max-width: 750px) {
+  .site_banner {
+    height: 230px;
+  }
+}
 
 .item_class_name {
   padding: 8px 0px;
