@@ -1,3 +1,8 @@
+.create_issue_page {
+    width: 100%;
+    max-width: 500px;
+} 
+
 .create_issue_page_form_inp_area {
     margin-bottom: 7px;
 }
@@ -21,9 +26,4 @@
 .create_issue_page_form_inp_area > button {
     width: 100%;
     padding: 5px;
-}
-
-.create_issue_page {
-    width: 100%;
-    max-width: 500px;
 }

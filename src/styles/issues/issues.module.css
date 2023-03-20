@@ -1,5 +1,6 @@
 .issues_page {
     width: 100%;
+    min-height: 500px;
 }
 
 .issues_pagination {

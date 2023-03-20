@@ -17,8 +17,11 @@ const RootLayout = ({children}: Props) => {
     <html lang="en">
         <Script id="show-banner" strategy="afterInteractive">
           {`
-            let main_banner = document.querySelectorAll(".banner")[0]
-            let footer_banner = document.querySelectorAll(".banner")[1]
+            let main_banner0 = document.querySelectorAll(".banner")[0]
+            let main_banner1 = document.querySelectorAll(".banner")[1]
+            let main_banner2 = document.querySelectorAll(".banner")[2]
+            let main_banner3 = document.querySelectorAll(".banner")[3]
+            let footer_banner = document.querySelectorAll("footer.banner")[0]
             let observer = new IntersectionObserver((e) => {
                 e.forEach((element) => {
                     if (element.isIntersecting) {
@@ -28,8 +31,21 @@ const RootLayout = ({children}: Props) => {
                     }
                 })
             });
-            observer.observe(main_banner);
+            observer.observe(main_banner0);
+            observer.observe(main_banner1);
+            observer.observe(main_banner2);
+            observer.observe(main_banner3);
             observer.observe(footer_banner);
+            
+            let main_banner_count = 0;
+            let main_banners = document.querySelectorAll(".site_banner");
+
+            setInterval(() => {
+              main_banners[main_banner_count].style.display = "none";
+              main_banner_count++;
+              main_banner_count %= 4;
+              main_banners[main_banner_count].style.display = "block";
+            }, 5000)
           `}
         </Script>
         {
@@ -52,7 +68,12 @@ const RootLayout = ({children}: Props) => {
           </ul>
         </div>
       </header>
-      <div className="site_banner banner"></div>
+      <div className="site_banners">
+        <div className="site_banner banner"></div>
+        <div className="site_banner banner"></div>
+        <div className="site_banner banner"></div>
+        <div className="site_banner banner"></div>
+      </div>
       <div className="app">
         {children}
       </div>
