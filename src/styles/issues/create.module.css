@@ -1,6 +1,7 @@
 .create_issue_page {
     width: 100%;
     max-width: 500px;
+    min-height: 500px;
 } 
 
 .create_issue_page_form_inp_area {
