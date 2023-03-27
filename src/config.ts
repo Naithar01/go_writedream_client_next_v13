@@ -4,7 +4,8 @@ interface IPAGE_NAME {
     },
     Issue: {
         Issues: string,
-        Create: string
+        Create: string,
+        Delete: string,
     }
 }
 
@@ -14,7 +15,8 @@ interface IPAGE_HREF {
     },
     Issue: {
         Issues: string,
-        Create: string
+        Create: string,
+        Delete: string,
     }
 }
 
@@ -40,7 +42,8 @@ const PAGE_NAME: IPAGE_NAME = {
     },
     Issue: {
         Issues: "Issues",
-        Create: "Create Issue"
+        Create: "Create Issue",
+        Delete: "Delete Issue",
     }
 }
 
@@ -51,7 +54,8 @@ const PAGE_HREF: IPAGE_HREF = {
     },
     Issue: {
         Issues: "/issues?page=1&page_limit=5",
-        Create: "/issues/create"
+        Create: "/issues/create",
+        Delete: "/issues/delete",
     }
 }
 
@@ -87,7 +91,8 @@ export const NO_OBJECT_COMMENT: string = "No Object"
 export const ISSUE_PAGE_MANU_TITLE: string = "Manu"
 export const ISSUE_PAGE_MANU_LIST: IPAGE_MANU_LIST[] = [
     { item_name: PAGE_NAME.Issue.Issues, item_href: PAGE_HREF.Issue.Issues, item_class_name: "issue_side_manu_item" },
-    { item_name: PAGE_NAME.Issue.Create, item_href: PAGE_HREF.Issue.Create, item_class_name: "issue_side_manu_item" }
+    { item_name: PAGE_NAME.Issue.Create, item_href: PAGE_HREF.Issue.Create, item_class_name: "issue_side_manu_item" },
+    { item_name: PAGE_NAME.Issue.Delete, item_href: PAGE_HREF.Issue.Delete, item_class_name: "issue_side_manu_item" }
 ]
 
 export const ISSUES_PAGE_HEADER_COMMENT: string = "Issue Page"

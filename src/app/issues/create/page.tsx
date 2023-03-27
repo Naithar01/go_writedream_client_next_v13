@@ -21,6 +21,18 @@ const CreateIssuePage = () => {
             content: content_element.value,
         }
 
+        if (Data.title.length == 0 || Data.content.length == 0) {
+            alert("Enter Title, Content")
+
+            return
+        }
+
+        if (Data.title.length >= 50) {
+            alert("Max Title Lenth: 50")
+
+            return
+        }
+
         const Category_number: number = 1 
 
         const datas: {id: number} = await createIssue(Data, Category_number)
