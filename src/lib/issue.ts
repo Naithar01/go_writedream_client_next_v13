@@ -31,6 +31,7 @@ interface IGetIssueQuery {
     category_id: number
 }
 
+// Server Component
 export const getIssues = async ({page, page_limit, category_id}: IGetIssueQuery) => {
     // 카테고리 상관 없는 Issue들
     if (category_id == undefined || category_id <= 0) {
@@ -64,13 +65,15 @@ export const getIssues = async ({page, page_limit, category_id}: IGetIssueQuery)
     return await res.json();
 };
 
+// Server Component => Client Component 
+// Why => ? 
+// * Hook ( onClick Event ( Delete, Update ... ) )
 export const getIssueByIssueId = async (id: number) => {
     const res: Response = await fetch(`${DEFAULT_API_URL}/api/issues/${id}`, {
         method: "GET",
         headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
         },
-        cache: 'no-store'
     });
 
     if (res.status != 200) {
@@ -80,7 +83,7 @@ export const getIssueByIssueId = async (id: number) => {
     return await res.json();
 };
 
-
+// Client Component
 export const createIssue = async (Data: ICreateIssue, category: number) => {
     const res: Response = await fetch(`/api/issues?category_id=${category}`, {
         method: "POST",

@@ -5,7 +5,6 @@ interface IPAGE_NAME {
     Issue: {
         Issues: string,
         Create: string,
-        Delete: string,
     }
 }
 
@@ -16,7 +15,6 @@ interface IPAGE_HREF {
     Issue: {
         Issues: string,
         Create: string,
-        Delete: string,
     }
 }
 
@@ -43,7 +41,6 @@ const PAGE_NAME: IPAGE_NAME = {
     Issue: {
         Issues: "Issues",
         Create: "Create Issue",
-        Delete: "Delete Issue",
     }
 }
 
@@ -55,7 +52,6 @@ const PAGE_HREF: IPAGE_HREF = {
     Issue: {
         Issues: "/issues?page=1&page_limit=5",
         Create: "/issues/create",
-        Delete: "/issues/delete",
     }
 }
 
@@ -77,7 +73,7 @@ export const MAIN_PAGE_BANNER_CONTENTS: IPAGE_INFO[] = [
     { Title: "DB", text: ["Mysql"] },
 ]
 
-export const DEFAULT_API_URL: string = "http://ec2-3-34-53-123.ap-northeast-2.compute.amazonaws.com:8080"; // Deploy
+export const DEFAULT_API_URL: string = "http://localhost:8080"; // Deploy
 // export const DEFAULT_API_URL: string = "http://localhost:8080"; // Local
 
 export const PROJECT_PAGE_LOGO: string = "LOGO"
@@ -92,7 +88,6 @@ export const ISSUE_PAGE_MANU_TITLE: string = "Manu"
 export const ISSUE_PAGE_MANU_LIST: IPAGE_MANU_LIST[] = [
     { item_name: PAGE_NAME.Issue.Issues, item_href: PAGE_HREF.Issue.Issues, item_class_name: "issue_side_manu_item" },
     { item_name: PAGE_NAME.Issue.Create, item_href: PAGE_HREF.Issue.Create, item_class_name: "issue_side_manu_item" },
-    { item_name: PAGE_NAME.Issue.Delete, item_href: PAGE_HREF.Issue.Delete, item_class_name: "issue_side_manu_item" }
 ]
 
 export const ISSUES_PAGE_HEADER_COMMENT: string = "Issue Page"
