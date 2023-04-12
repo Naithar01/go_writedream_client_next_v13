@@ -74,6 +74,7 @@ export const getIssueByIssueId = async (id: number) => {
         headers: {
             'Content-Type': 'application/json',
         },
+        next: { revalidate: 10 }
     });
 
     if (res.status != 200) {

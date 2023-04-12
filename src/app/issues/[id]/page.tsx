@@ -13,7 +13,10 @@ type Props = {
   }
 }
 
-const ReadIssuePage = ({params}: Props) => {
+// SWR
+// https://swr.vercel.app/ko
+
+const ReadIssuePage = async ({params}: Props) => {
   const id = params.id
 
   const [issue, setIssue] = useState<IReadIssue>()
