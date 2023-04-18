@@ -18,6 +18,7 @@ export interface IReadIssue {
     created_at: Date,
     updated_at: Date,
     memos: any // 추가 예정
+    images: string[]
 }
 
 export interface ICreateIssue {

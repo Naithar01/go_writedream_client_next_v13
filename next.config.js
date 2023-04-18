@@ -13,6 +13,9 @@ const nextConfig = {
       },
     ];
   },
+  images: {
+    domains: ['localhost', 'ec2-3-34-53-123.ap-northeast-2.compute.amazonaws.com'],
+  },
 }
 
 module.exports = nextConfig

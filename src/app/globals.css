@@ -89,6 +89,7 @@ li {
 }
 
 .site_footer_banner {
+  margin-top: 200px;
   background-image: url("../assets/banner/footer_banner1.jpg");
   background-size: contain;
   background-position: bottom;

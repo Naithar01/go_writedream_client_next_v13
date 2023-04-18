@@ -15,4 +15,10 @@
 
 .read_issue_page_item_content {
     margin-top: 20px;
-} 
+}
+
+.read_issue_page_item_images {
+    margin: 9px auto;
+    width: 90%;
+    height: auto;
+}

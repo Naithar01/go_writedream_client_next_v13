@@ -1,5 +1,6 @@
-import { CREATED_COMMENT, UPDATED_COMMENT, VIEWCOUNT_COMMENT } from "@/config"
+import { CREATED_COMMENT, DEFAULT_API_URL, UPDATED_COMMENT, VIEWCOUNT_COMMENT } from "@/config"
 import { IReadIssue } from "@/lib/issue"
+import Image from 'next/image';
 
 import styles from "../../styles/issues/read.module.css"
 
@@ -17,6 +18,12 @@ const ReadIssueItem = ({issue}: Props) => {
                 </p>
                 <small>{VIEWCOUNT_COMMENT + issue.view_count}</small>
             </header>
+            
+            {issue.images && issue.images.map((image, index) => (
+            <div className={styles.read_issue_page_item_images} key={index}>
+                <Image src={`${DEFAULT_API_URL}/files/${issue.id}/${image}`} alt={image} width={300} height={300} layout="responsive"  />
+            </div>
+            ))}
             <div className={styles.read_issue_page_item_content} dangerouslySetInnerHTML={ {__html: issue.content} }>
             </div>
             <footer className="read_issue_page_item_memos">
