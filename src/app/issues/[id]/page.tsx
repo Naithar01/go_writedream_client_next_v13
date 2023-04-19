@@ -31,7 +31,6 @@ const ReadIssuePage = ({params}: Props) => {
 
     setIssue(ResponseData.issue)
 
-    console.log(ResponseData.issue);
     return 
   }
 

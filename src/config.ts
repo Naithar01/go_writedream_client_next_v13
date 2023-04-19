@@ -95,6 +95,7 @@ export const ISSUES_PAGE_HEADER_COMMENT: string = "Issue Page"
 export const CREATE_ISSUE_PAGE_HEADER_COMMENT: string = "Create Issue Page"
 export const CREATE_ISSUE_PAGE_INPUT_ISSUE_TITLE_COMMENT: string = "Issue Title"
 export const CREATE_ISSUE_PAGE_INPUT_ISSUE_CONTENT_COMMENT: string = "Issue Content"
+export const CREATE_ISSUE_PAGE_INPUT_ISSUE_IMAGES_COMMENT: string = "Issue Images"
 export const CREATE_ISSUE_PAGE_INPUT_ISSUE_CREATE_COMMENT: string = "Create Issue"
 export const CREATE_ISSUE_PAGE_INPUT_MINLENGTH: number = 6
 

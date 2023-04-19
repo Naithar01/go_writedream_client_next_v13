@@ -86,13 +86,10 @@ export const getIssueByIssueId = async (id: number) => {
 };
 
 // Client Component
-export const createIssue = async (Data: ICreateIssue, category: number) => {
+export const createIssue = async (formData: FormData, category: number) => {
     const res: Response = await fetch(`/api/issues?category_id=${category}`, {
         method: "POST",
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(Data),
+        body: formData,
     })
 
     if (res.status != 201) {
