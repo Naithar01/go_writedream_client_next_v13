@@ -16,12 +16,12 @@ type Props = {
 const RootLayout = ({children}: Props) => {
   return (
     <html lang="en">
-      <Head>
+      {/* <Head>
         <meta 
           httpEquiv="Content-Security-Policy" 
           content="upgrade-insecure-requests" 
         />
-      </Head>
+      </Head> */}
         <Script id="show-banner" strategy="afterInteractive">
           {`
             let main_banner0 = document.querySelectorAll(".banner")[0]
