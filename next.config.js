@@ -12,11 +12,11 @@ const nextConfig = {
         // http://localhost:8080/api/:path*/ Loadl
       },
       {
-      source: "/files/:path*",
-      destination: "http://ec2-15-164-129-199.ap-northeast-2.compute.amazonaws.com:8080/files/:path*/",
+        source: "/files/:path*",
+        destination: "http://ec2-15-164-129-199.ap-northeast-2.compute.amazonaws.com:8080/files/:path*/",
       },
     ];
-  },
+  },  
 
 }
 

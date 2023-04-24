@@ -70,8 +70,11 @@ export const getIssues = async ({page, page_limit, category_id}: IGetIssueQuery)
 // Why => ? 
 // * Hook ( onClick Event ( Delete, Update ... ) )
 export const getIssueByIssueId = async (id: number) => {
-    const res: Response = await fetch(`${DEFAULT_API_URL}/api/issues/${id}`, {
+    const res: Response = await fetch(`/api/issues/${id}`, {
         method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
         cache: 'no-store'
     });
 
