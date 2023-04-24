@@ -17,8 +17,8 @@
     margin-top: 20px;
 }
 
-.read_issue_page_item_images {
+.read_issue_page_item_images img{
     margin: 9px auto;
-    width: 90%;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
