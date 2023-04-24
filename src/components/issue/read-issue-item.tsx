@@ -19,11 +19,6 @@ const ReadIssueItem = ({issue}: Props) => {
                 <small>{VIEWCOUNT_COMMENT + issue.view_count}</small>
             </header>
             
-            {issue.images && issue.images.map((image, index) => (
-            <div className={styles.read_issue_page_item_images} key={index}>
-                <img src={`/files/${issue.id}/${image}`} alt={image} />
-            </div>
-            ))}
             <div className={styles.read_issue_page_item_content} dangerouslySetInnerHTML={ {__html: issue.content} }>
             </div>
             <footer className="read_issue_page_item_memos">
