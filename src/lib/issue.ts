@@ -72,7 +72,7 @@ export const getIssues = async ({page, page_limit, category_id}: IGetIssueQuery)
 export const getIssueByIssueId = async (id: number) => {
     const res: Response = await fetch(`${DEFAULT_API_URL}/api/issues/${id}`, {
         method: "GET",
-        next: { revalidate: 10 }
+        cache: 'no-store'
     });
 
     if (res.status != 200) {
