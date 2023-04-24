@@ -21,7 +21,7 @@ const ReadIssueItem = ({issue}: Props) => {
             
             {issue.images && issue.images.map((image, index) => (
             <div className={styles.read_issue_page_item_images} key={index}>
-                <Image src={`${DEFAULT_API_URL}/files/${issue.id}/${image}`} alt={image} width={300} height={300} layout="responsive" unoptimized={true}  />
+                <Image src={`${DEFAULT_API_URL}/files/${issue.id}/${image}`} alt={image} width={300} height={300} layout="responsive" unoptimized={true} />
             </div>
             ))}
             <div className={styles.read_issue_page_item_content} dangerouslySetInnerHTML={ {__html: issue.content} }>
