@@ -14,7 +14,16 @@ const nextConfig = {
     ];
   },
   images: {
-    domains: ['localhost', 'ec2-15-164-129-199.ap-northeast-2.compute.amazonaws.com'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'ec2-15-164-129-199.ap-northeast-2.compute.amazonaws.com'
+      },
+      {
+        protocol: 'http',
+        hostname: 'localhost'
+      }
+    ]
   },
 }
 
