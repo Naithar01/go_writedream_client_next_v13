@@ -2,6 +2,7 @@ import { PROJECT_PAGE_LOGO, PROJECT_PAGE_MANU_LIST } from '@/config'
 import Link from 'next/link'
 import Script from 'next/script'
 import './globals.css'
+import { Head } from 'next/document'
 
 export const metadata = {
   title: 'Zl존 정호',
@@ -15,7 +16,12 @@ type Props = {
 const RootLayout = ({children}: Props) => {
   return (
     <html lang="en">
-      <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
+      <Head>
+        <meta 
+          httpEquiv="Content-Security-Policy" 
+          content="upgrade-insecure-requests" 
+        />
+      </Head>
         <Script id="show-banner" strategy="afterInteractive">
           {`
             let main_banner0 = document.querySelectorAll(".banner")[0]
