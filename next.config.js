@@ -14,16 +14,8 @@ const nextConfig = {
     ];
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'http',
-        hostname: 'ec2-15-164-129-199.ap-northeast-2.compute.amazonaws.com'
-      },
-      {
-        protocol: 'http',
-        hostname: 'localhost'
-      }
-    ]
+    loader: 'imgix',
+    path: 'http://ec2-15-164-129-199.ap-northeast-2.compute.amazonaws.com:8080/',
   },
 }
 
